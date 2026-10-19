@@ -119,7 +119,7 @@ if query:
             )
 
             llm = ChatOpenAI(
-                model="nvidia/llama-3.1-nemotron-70b-instruct",
+                model="nvidia/nemotron-3.5-super-vl-120b-a12b",
                 api_key=api_key,
                 base_url="https://integrate.api.nvidia.com/v1",
                 temperature=0.1
