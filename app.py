@@ -103,10 +103,9 @@ if query:
             # Step B: Retrieve Top Matching Document Chunks
             retrieved_docs = retriever.invoke(query)
 
-            # Step C: Format Context with Metadata for Citation
             context_text = "\n\n".join([
-                f"\n{doc.page_content}"
-                for doc.index, doc in enumerate(retrieved_docs)
+                f"[Source {i+1}]: {doc.page_content}"
+                for i, doc in enumerate(retrieved_docs)
             ])
 
             # Step D: Setup Prompt and LLM
